@@ -11,6 +11,7 @@ export default function HomePage() {
     function handleText(e) {
         const value = e.target.value
         const words = value.trim().split(/\s+/).filter(word => word.length > 0)
+        setWord(words.length)
 
         const sentences = value.trim().split(/[.!?]+/).map(s => s.trim()).filter(s => s.length > 0)
         setSentence(sentences.length)
